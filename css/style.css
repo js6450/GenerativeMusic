@@ -1,0 +1,79 @@
+body, html{
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+#bgCanvas{
+    position: fixed;
+    top: 0;
+    z-index: -999;
+}
+
+#main-content{
+    margin-right: 1.5em;
+}
+
+#page-content{
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2em;
+}
+
+#back-button{
+    float: right;
+    margin-top: 2em;
+    margin-right: calc(10% - 2em);
+}
+
+#back-button-text:hover{
+    text-decoration: underline;
+}
+
+#main{
+    width: 75%;
+}
+
+#menu{
+    width: calc(25% - 1.5em);
+    float: right;
+    margin-right: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-title, .menu-subtitle{
+    text-align: right;
+}
+
+.menu-title{
+    font-size: 48px;
+}
+
+.entry{
+    clear: both;
+}
+
+.menu-subtitle{
+    display: inline-block;
+    float: right;
+    margin: 0.5em 0;
+}
+
+.menu-subtitle:hover{
+    color: white;
+    font-style: italic;
+    background-color: black;
+
+    transition: color 1s, font-style 1s, background-color 1s;
+}
+
+.entry-title{
+    font-size: 32px;
+    margin: 1em 0;
+}

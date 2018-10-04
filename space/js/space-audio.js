@@ -613,3 +613,7 @@ class Solar{
     }
 
 }
+
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight);
+}

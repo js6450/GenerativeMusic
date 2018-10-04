@@ -2,17 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>"   "</title>
+    <title>"&nbsp;&nbsp;&nbsp;SPACE&nbsp;&nbsp;&nbsp;"</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/Tone.min.js"></script>
     <script src="js/inst.js"></script>
     <script src="js/space-audio.js"></script>
-    <style>
-        body{
-            margin: 0;
-        }
-    </style>
 </head>
+<style>
+    body{
+        margin: 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+
+        overflow: hidden;
+    }
+
+    .title{
+        position: absolute;
+        right: 18px;
+        bottom: 0;
+        color: white;
+        transition: bottom 1s;
+
+    }
+
+    .title:hover{
+        cursor: pointer;
+        animation: blink 2s alternate infinite;
+    }
+
+    .title-up{
+        bottom: 90vh;
+        transition: bottom 1s;
+        color: white;
+    }
+
+    @keyframes blink{
+        0%{
+            color: white;
+        }
+        50%{
+            color: #4b4b4b;
+        }
+    }
+
+    .info{
+        position: absolute;
+        color: white;
+        width: 25%;
+        right: 18px;
+        top: 100vh;
+        transition: top 1s;
+    }
+
+    .info-up{
+        top: 10vh;
+        transition: top 1s;
+    }
+
+</style>
 <body>
+    <h1 onclick="showInfo(this)" class="title">"&nbsp;&nbsp;&nbsp;S P A C E&nbsp;&nbsp;&nbsp;"</h1>
+    <div class="info">
+        <hr>
+        <p style="text-align: justify">Sound and graphics generated using Earth-related data sets listed below during the year of October 1, 2017 - September 30, 2018.</p>
+        <hr>
+        <div style="text-align: right">
+            <p>Data collected from:</p>
+            <a style="color: white" target="_blank" href="https://cneos.jpl.nasa.gov/ca/">NEO Earth Close Approaches Data</a>, NASA CNEOS</p>
+            <a style="color: white" target="_blank" href="https://cneos.jpl.nasa.gov/fireballs/">Fireballs and Bolide Data</a>, NASA CNEOS</p>
+            <a style="color: white" target="_blank" href="https://www.spaceweatherlive.com/en/auroral-activity/top-50-geomagnetic-storms/year/2017">Top 50 Geomagnetic Storms</a>, 2017 & 2018, Space Weather Live</p>
+            <a style="color: white" target="_blank" href="https://www.spaceweatherlive.com/en/solar-activity/top-50-solar-flares">Top 50 Solar Flares</a>, 2017 & 2018, Space Weather Live</p>
+            <hr>
+            <p>Created by <a style="color: white" target="_blank" href="http://jiwonshin.com">Jiwon Shin</a></p>
+            <p>using <a style="color: white" target="_blank" href="https://tonejs.github.io/">Tone.js</a> for sound generation<br>and <a style="color: white" target="_blank" href="https://p5js.org/">p5.js</a> for graphics</p>
+        </div>
+
+    </div>
 </body>
+<script>
+    var up = false;
+
+    function showInfo(elem){
+        if(!up){
+            elem.setAttribute("class", "title title-up");
+            document.getElementsByClassName("info")[0].setAttribute("class", "info info-up");
+
+            up = true;
+        }else{
+            console.log('here');
+            elem.setAttribute("class", "title");
+            document.getElementsByClassName("info")[0].setAttribute("class", "info");
+
+            up = false;
+        }
+    }
+</script>
 </html>

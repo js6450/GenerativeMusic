@@ -63,6 +63,12 @@ a{
     margin-right: -0.45em;
 }
 
+.menu-link{
+    text-align: right;
+    font-weight: lighter;
+    color: #4e4e4e;
+}
+
 .entry{
     clear: both;
 }
@@ -81,8 +87,14 @@ a{
     transition: color 1s, font-style 1s, background-color 1s;
 }
 
+.section{
+    text-align: right;
+    background: black;
+    color: white;
+    margin-left: 1.5em;
+}
+
 .subtle-link{
-    float: right;
     color: #4e4e4e;
     margin-bottom: 0.5em;
     font-size: 16px;

@@ -11,13 +11,128 @@
     <div id="page-content">
         <h5 class="entry-title">Week 9: Machine Generated Music</h5>
         <p class="date-text">Nov 12, 2018</p>
-
-
+        <p>For the machine generated music assignment, I decided to use LSTM, introduced in class, to train on KPOP boyband songs. For this assigment, I wanted to focus on learning and practicing the flow of creating machine generated music.</p>
+        <p>When I initially started collecting data for this assignment, I realized that there are not a lot of "clean" midi notations of KPOP music, and the ones that were available for me to download / use on the MuseScore website were heavily based on popularity of certain bands. This is why I decided to use <a class="p-link" href="">Piano Scribe</a> to generate the midi notes. I ran 100 piano covers of the popular KPOP boyband songs through Piano Scribe. Then, I processed the midi notes in Python using the mido library. The notation that I settled on for each note was in form of </p>
+        <pre style="background-color: rgba(255, 255, 255, 0.5)">
+    n90v62t2500
+        </pre>
+        <p>where the number after n is the midi note, the number after v is the velocity and the number after t is the start time of the note.</p>
+        <p>I ran the training model with the following parameters:</p>
+        <pre style="background-color: rgba(255, 255, 255, 0.5)">
+    --rnn_size 256 --num_layers 2 --seq_length 64 --batch_size 32 --num_epochs 50
+        </pre>
+        <p>Using the trained model, I generated music using different parameters of: length of generation, randomness of seed, total length of generated tokens. After a number of attempts, I realized the model was not "accurate enough" and needed some constraints. I threw away tokens that didn't have all three parameters of midi note, velocity and start time. I also played around with setting constraints for the range of the start time. At first, I tried simple constraint of putting a maximum number for the start time value, then I created an array that would keep track of how many tokens were created for ranges of start times, and limited the maximum number of tokens that could be generated for each time range.</p>
+        <p>I also then played around with the tempo and the time division when creating the generated tokens back into midi notation.</p>
+        <p>Below are some of the generations using different parameters:</p>
         <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/642314763%3Fsecret_token%3Ds-hr0pH&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
+        <p>I then "stylized" the generations by dividing the generations into different C octaves in different channels and playing around with the bar duration fo each of the C-octave channels.</p>
         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/528519885%3Fsecret_token%3Ds-TfPPX&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-
+        <p>Below track is an experiment I did using different synthesizers.</p>
         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/528519930%3Fsecret_token%3Ds-1xFoN&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <p>The conclusion of the experiment of using LSTM model to train on KPOP songs is that 1) KPOP songs are not as "generated" or "automated" as I thought they were OR 2) it is harder than I thought to do an eloquent and accurate ML generation of music.</p>
+        <p>Complete list of songs used:</p>
+        <ol>
+            <li>R & V - 4 o’clock</li>
+            <li>BTS - I Need U</li>
+            <li>Exo - Tempo</li>
+            <li>BTOB - Friend</li>
+            <li>iKon - Goodbye Road</li>
+            <li>BTS - Butterfly</li>
+            <li>Seventeen - Mansae</li>
+            <li>Got7 - Lullaby</li>
+            <li>BTS - Seesaw</li>
+            <li>BTS - Ephiphany</li>
+            <li>BTS - Love Myself</li>
+            <li>BTS - I’m Fine</li>
+            <li>BTS - Idol</li>
+            <li>Seventeen - A-teen</li>
+            <li>Stray kids - My pace</li>
+            <li>iKon - Killing me</li>
+            <li>Zico - Soulmate</li>
+            <li>Seventeen - Our dawn is hotter than day</li>
+            <li>Seventeen - Oh my!</li>
+            <li>Nuest - Dejavue</li>
+            <li>BTOB - Only one for me</li>
+            <li>Wanna One - Sandglass</li>
+            <li>Wanna One - Light</li>
+            <li>BTS - Airplane pt. 2</li>
+            <li>BTS - Anpanman</li>
+            <li>BTS - Magic Shop</li>
+            <li>BTS - Love Maze</li>
+            <li>BTS - The Truth Untold</li>
+            <li>BTS - Fake Love</li>
+            <li>Crush - Bittersweet</li>
+            <li>Seventeen - Campfire</li>
+            <li>BTS - Singularity</li>
+            <li>Pentagon - Shine</li>
+            <li>JBJ - Call your name</li>
+            <li>BTS - Don’t leave me</li>
+            <li>Winner - Everyday</li>
+            <li>Wanna One - I’ll remember</li>
+            <li>Wanna One - Boomerang</li>
+            <li>Big Bang - Flower road</li>
+            <li>Wanna One - I Promise U</li>
+            <li>BTS - Save Me</li>
+            <li>Wanna One - Nothing without you</li>
+            <li>Seventeen - Run to you</li>
+            <li>Seventeen - Thanks</li>
+            <li>iKon - Love Scenario</li>
+            <li>JBJ - My Flower</li>
+            <li>Infinite - Tell me</li>
+            <li>Dean - Instagram</li>
+            <li>Exo - Universe</li>
+            <li>BTS - Crystal snow</li>
+            <li>Pentagon - Like This</li>
+            <li>Wanna One - Wanna</li>
+            <li>Wanna One - Beautiful</li>
+            <li>Seventeen - Without you</li>
+            <li>Seventeen - Clap</li>
+            <li>JBJ - Fantasy</li>
+            <li>Seventeen - Pinwheel</li>
+            <li>BTOB - Missing you</li>
+            <li>Nuest - Where you at</li>
+            <li>Seventeen - Change up</li>
+            <li>BTS - Best of Me</li>
+            <li>BTS - DNA</li>
+            <li>Seventeen - Pretty U</li>
+            <li>BTS - Serendipity</li>
+            <li>EXO - Power</li>
+            <li>EXO - The Eve</li>
+            <li>BTS - Love Yourself</li>
+            <li>Big Bang - Last dance</li>
+            <li>Taeyang - Darling</li>
+            <li>Wanna One - Burn it up</li>
+            <li>Wanna One - Wanna be</li>
+            <li>Wanna One - Energetic</li>
+            <li>Winner - Love me love me</li>
+            <li>Nuest - Daybreak</li>
+            <li>Nuest - If you</li>
+            <li>Nuest - Hello</li>
+            <li>Nuest - Love paint</li>
+            <li>Exo - Ko ko bop</li>
+            <li>Exo - Monster</li>
+            <li>G-Dragon - Untitled</li>
+            <li>Seventeen - Don’t wanna cry</li>
+            <li>BTS - Young forever</li>
+            <li>Winner - Fool</li>
+            <li>Zico - She’s a baby</li>
+            <li>Winner - Really really</li>
+            <li>BTS - Awake</li>
+            <li>BTS - Lost</li>
+            <li>Highlight - Plz don’t be sad</li>
+            <li>Henry - Girlfriend</li>
+            <li>Got7 - Never ever</li>
+            <li>BTS - Run</li>
+            <li>BTOB - Someday</li>
+            <li>BTS - Stigma</li>
+            <li>BTS - Wings</li>
+            <li>BTS - First Love</li>
+            <li>BTS - Lie</li>
+            <li>BTS - Spring day</li>
+            <li>Block B - Yesterday</li>
+            <li>BTS - Butterfly</li>
+            <li>BTS - Blood, Sweat, Tears</li>
+        </ol>
     </div>
     <div id="back-button">
         <a target="_self" href="../index.html"><span id="back-button-text">BACK TO MAIN</span></a>

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6fc0d06-d7d9-47a3-b802-74eb4087fc2a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weekly/9.html" beforeDir="false" afterPath="$PROJECT_DIR$/weekly/9.html" afterDir="false" />
-    </list>
+    <list default="true" id="e6fc0d06-d7d9-47a3-b802-74eb4087fc2a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -204,16 +201,15 @@
       <workItem from="1539912986835" duration="127000" />
       <workItem from="1540340040893" duration="1812000" />
       <workItem from="1541031377212" duration="301000" />
-      <workItem from="1542011541173" duration="3002000" />
+      <workItem from="1542011541173" duration="3291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21538000" />
+    <option name="totallyTimeSpent" value="21827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="560" y="23" width="1120" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24231465" />
       <window_info anchor="bottom" id="TODO" order="6" />

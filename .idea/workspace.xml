@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6fc0d06-d7d9-47a3-b802-74eb4087fc2a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/weekly/12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weekly/12.html" beforeDir="false" afterPath="$PROJECT_DIR$/weekly/week-12.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="12.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/weekly/12.html">
+      <file leaf-file-name="week-12.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weekly/week-12.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="20" selection-start-line="20" selection-end-line="21" />
+            <state relative-caret-position="291">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/space/js/space-audio.js" />
         <option value="$PROJECT_DIR$/weekly/9-visual.html" />
         <option value="$PROJECT_DIR$/weekly/9.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/weekly/12.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -189,25 +188,24 @@
       <workItem from="1541031377212" duration="301000" />
       <workItem from="1542011541173" duration="3291000" />
       <workItem from="1542326134986" duration="411000" />
-      <workItem from="1544124113695" duration="1925000" />
+      <workItem from="1544124113695" duration="2157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24163000" />
+    <option name="totallyTimeSpent" value="24395000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="1027" extended-state="0" />
-    <editor active="true" />
+    <frame x="20" y="23" width="1660" height="1027" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24231465" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24222086" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -548,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weekly/9-visual.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -580,10 +571,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weekly/12.html">
+    <entry file="file://$PROJECT_DIR$/weekly/week-12.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="20" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="291">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
         </state>
       </provider>
     </entry>

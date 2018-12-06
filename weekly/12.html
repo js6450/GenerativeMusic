@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Jiwon Shin | Generative Music</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+</head>
+<body>
+<div id="content">
+    <div id="page-content">
+        <h5 class="entry-title">Week 12: Polyphony RNN</h5>
+        <p class="date-text">Dec 6, 2018</p>
+        <p>For this week's exploration of generating music with Magenta, I've experimented with Polyphony RNN model. Setting up the environment for Magenta wasn't too difficult and training & generating polphonny RNN model generated music was similar to that of the Melody RNN model that we did during class. I considered using Paperspace to train my model, but it seemed like the amount of time that it would take to train were somewhat the same as the time it would take to do locally on my computer, so I decided to run the locally overnight for two days, which allowed me to train over 20,000 steps in total. The fact that I could use the last checkpoints helped a lot, so that I could train a little by little, which accumulated to increasing the accuracy and decreasing the loss. The final trained model had 20465 global steps, accuracy of 0.8278694 and loss of 0.59624904.</p>
+        <p>As for the midi files that used to generate with the polyphony rnn model, I decided to retry to generate Kpop songs, but this time with a lot less songs and all of which had a similar genre of hiphop R&B. I had a total of 26 midi files that were transcribed using the <a class="p-link" href="https://piano-scribe.glitch.me/">Piano Scribe</a> from piano covers of songs that I found on the web. Because I had the piano scribe transcribe audio files to midi, the midi files were not as clean as I would have liked them to be.</p>
+        <p>After the model was trained, I tried different arguments in the generating command to explore how different inputs changed the generated midi files.</p>
+        <p>Below are playlists of songs that were generated with different inputs.</p>
+        <p>Primer pitches of 60, 64, 67 and condition on primer false, inject primer during generation false and 128 number of steps:</p>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/658812570%3Fsecret_token%3Ds-GbGg3&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <p>Primer pitches of 60, 64, 67 and condition on primer true, inject primer during generation false and 128 number of steps:</p>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/658814697%3Fsecret_token%3Ds-6Bo71&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <p>Primer pitches of 60, 64, 67 and condition on primer true, inject primer during generation true and 128 number of steps:</p>
+        <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/658815150%3Fsecret_token%3Ds-e6Nn1&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <p>I also tried generating longer pieces of 2048 number of steps, and this is one that I particularly liked:</p>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/540814140%3Fsecret_token%3Ds-4Smj3&color=%2324090b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    </div>
+    <div id="back-button">
+        <a target="_self" href="../index.html"><span id="back-button-text">BACK TO MAIN</span></a>
+    </div>
+</div>
+</body>
+<script src="../js/background.js"></script>
+</html>

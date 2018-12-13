@@ -7,12 +7,16 @@ let cegb = [24, 28, 31, 35];
 
 let seeds = ["hi", "hello", "text me", "how are you", "im fine", "good"];
 
+let montserrat;
+
 function preload() {
     // Create the LSTM Generator with a pre trained model
     marcela = ml5.LSTMGenerator('models/marcela/');
     adley = ml5.LSTMGenerator('models/adley/');
     iain = ml5.LSTMGenerator('models/iain/');
     rashida = ml5.LSTMGenerator('models/rashida/');
+
+    montserrat = loadFont('font/Montserrat.ttf');
 }
 
 let people = [];
@@ -63,6 +67,7 @@ function setup() {
 
     //frameRate(2);
     noStroke();
+    textFont(montserrat);
 }
 
 let start = false;
